@@ -1,1 +1,1 @@
-cd app && sudo docker build -t node-web-app -f Dockerfile . && cd ..
+cd app && docker build -t node-web-app -f Dockerfile . && cd ..

@@ -2,13 +2,13 @@ stages:
   - publish
 
 before_script:
-  - sudo docker info
+  - docker info
 
 publish:
   stage: publish
   when: manual
   script:
-    - sudo docker login -u $registry_login -p $registry_password $registry_url
+    - docker login -u $registry_login -p $registry_password $registry_url
     - . ./scripts/build.sh
     - . ./scripts/publish.sh
   tags:
